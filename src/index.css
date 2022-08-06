@@ -1,13 +1,61 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: sans-serif;
+}
+
+:root {
+  --main-bg-color: #0D0C1D;
+  --accent-color: #7D6F86;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  color: var(--accent-color);
+}
+
+.container, .editor-container, .preview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.editor-container {
+  border: 3px solid var(--accent-color);
+  border-radius: 5px;
+  width: fit-content;
+  margin-top: 10px;
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+}
+
+.editor-container textarea {
+  border: 1px solid var(--main-bg-color);
+  border-radius: 5px;
+  background-color: var(--main-bg-color);
+  color: var(--accent-color);
+}
+
+.preview-container {
+  width: 1000px;
+  border: 3px solid var(--accent-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: var(--accent-color);
+  color: var(--main-bg-color);
+}
+
+.preview-content {
+  width: 100%;
+  min-height: 200px;
+  border: 1px solid var(--main-bg-color);
+  border-radius: 5px;
+  background-color: var(--main-bg-color);
+  color: var(--accent-color);
 }
