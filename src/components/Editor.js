@@ -1,4 +1,4 @@
-export default function Editor ({ editorText }) {
+export default function Editor ({ editorText, onEditorTextChange }) {
   return (
     <div className='editor-container'>
       <div className='editor-header'>
@@ -9,6 +9,7 @@ export default function Editor ({ editorText }) {
         name='editor' 
         rows='10'
         cols='80'
+        onChange={(e) => onEditorTextChange(e.target.value)}
       >
         { editorText }
       </textarea>

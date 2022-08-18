@@ -17,6 +17,7 @@ export default function App() {
       <Editor 
         className='editor' 
         editorText={editorText} 
+        onEditorTextChange={setEditorText}
       />
       <Previewer 
         className='previewer'
