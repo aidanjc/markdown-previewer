@@ -4,7 +4,33 @@ import Editor from './components/Editor.js';
 import Previewer from './components/Previewer.js';
 
 const placeholder = `# Welcome to my React Markdown Previewer!
+## Preview your Markdown by writing it into the Editor!
 
+![Cat Photo](https://images.unsplash.com/photo-1477349585464-d181ff510abb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80)
+
+> Photo by [Dan Gold](https://unsplash.com/photos/f8nTaC227lo) on [Unsplash](https://unsplash.com/)
+
+Here's a list of cat breeds:
+* Ragdoll
+* Scottish Fold
+* Siamese
+
+In Markdown you can write inline code: \`<p>Meow!</p>\` 
+
+And even code blocks:
+\`\`\`
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cat Photos</title>
+  </head>
+  <body>
+    <h1>Cat Photos</h1>
+  </body>
+</html>
+\`\`\`
+
+**Finally**, here's a link to my [GitHub](https://github.com/aidanjc)
 `;
 
 
@@ -21,7 +47,9 @@ export default function App() {
       />
       <Previewer 
         className='previewer'
-        previewText={marked.parse(editorText)} 
+        previewText={
+          marked.parse(editorText)
+        } 
       />
     </div>
   );

@@ -7,7 +7,9 @@ export default function Previewer ({ previewText }) {
       <div 
         id='preview'
         className='preview-content'
-        dangerouslySetInnerHTML={{ __html: previewText }}
+        dangerouslySetInnerHTML={{ 
+          __html: previewText 
+        }}
       />
     </div>
   );
