@@ -4,11 +4,6 @@
   padding: 0;
 }
 
-{/*
-  NEED TERTIARY COLOR FOR:
-    * BLOCKQUOTE
-    * PRE/CODE
-*/}
 :root {
   --main-bg-color: #0D0C1D;
   --accent-color: #7D6F86;
@@ -94,6 +89,18 @@ body {
   font-weight: bold;
 }
 
+.preview-content i {
+  font-style: italic;
+}
+
+.preview-content s {
+  text-decoration: line-through;
+}
+
+.preview-content br {
+  margin: 10px auto;
+}
+
 .preview-content pre, .preview-content code {
   background-color: var(--accent-color);
   color: var(--main-bg-color);
@@ -111,3 +118,47 @@ body {
   margin-left: 3rem;
 }
 
+.preview-content table {
+  border: 1px solid var(--accent-color);
+  border-collapse: collapse;
+  width: fit-content;
+}
+
+.preview-content th, .preview-content td {
+  border: 1px solid var(--accent-color);
+  padding: 2px 8px 0;
+}
+
+@media (max-width: 1000px) {
+  .preview-container {
+    width: 800px;
+  }
+}
+
+@media (max-width: 800px) {
+  .editor-container {
+    width: 500px;
+  }
+
+  .editor-container textarea {
+    width: 490px;
+  }
+
+  .preview-container {
+    width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .editor-container {
+    width: 400px;
+  }
+
+  .editor-container textarea {
+    width: 390px;
+  }
+
+  .preview-container {
+    width: 400px;
+  }
+}

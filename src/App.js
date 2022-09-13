@@ -15,9 +15,9 @@ Here's a list of cat breeds:
 * Scottish Fold
 * Siamese
 
-In Markdown you can write inline code: \`<p>Meow!</p>\` 
+In *Markdown* you can write inline code: \`<p>Meow!</p>\` 
 
-And even code blocks:
+You can also write code blocks:
 \`\`\`
 <!DOCTYPE html>
 <html>
@@ -30,13 +30,21 @@ And even code blocks:
 </html>
 \`\`\`
 
+Even tables: 
+
+| Name          | Breed         | Age   |
+| ------------- |:-------------:| -----:|
+| Muffin        | Ragamuffin    |    10 |
+| Tiger         | Bengal        |     6 |
+| Poe           | Bombay        |     4 |
+
 **Finally**, here's a link to my [GitHub](https://github.com/aidanjc)
 `;
 
 
 export default function App() {
   const [editorText, setEditorText] = useState(placeholder);
-
+  
   return (
     <div className='container'>
       <h1>Markdown Previewer</h1>
